@@ -1,6 +1,6 @@
 +++
 date = '2026-05-16T10:16:02+02:00'
-draft = true
+draft = false
 title = 'Usare le derivate'
 tags= ['italian', 'inequalities', 'shor']
 +++
