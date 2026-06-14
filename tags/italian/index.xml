@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Italian on Dario Bekic Blog</title>
-    <link>http://localhost:1313/tags/italian/</link>
-    <description>Recent content in Italian on Dario Bekic Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 10:16:02 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/italian/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Usare le derivate</title>
-      <link>http://localhost:1313/posts/usare-le-derivate/</link>
-      <pubDate>Sat, 16 May 2026 10:16:02 +0200</pubDate>
-      <guid>http://localhost:1313/posts/usare-le-derivate/</guid>
-      <description>&lt;p&gt;A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell&amp;rsquo;algoritmo di Shor, quando mi sono imbattuto su questo (leggermente modificato ed incompleto) esercizio:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Siano $|\alpha|&amp;lt;\beta&amp;lt; \frac{\pi}{K}, \beta &amp;gt;0, K \in \mathbb{N}$ allora dimostra che &lt;/p&gt;&#xA;$$\frac{\sin^2(K\alpha)}{\sin^2(\alpha)}&gt;\frac{\sin^2(K\beta)}{\sin^2(\beta)}$$&lt;/blockquote&gt;&#xA;&lt;p&gt;Poiché stiamo elevando al quadrato il $\sin$ la disequazione sopra è soddisfatta quando:&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{align}&#xA; \left| \frac{\sin(K\alpha)}{\sin(\alpha)}\right| &gt;&amp; \left|\frac{\sin(K\beta)}{\sin(\beta)}\right|\\ &#xA; \frac{\sin (K |\alpha|)}{\sin(|\alpha|)}&gt;&amp;\frac{\sin(K \beta)}{\sin(\beta)}&#xA;\end{align}&#xA;$$&lt;p&gt;dove per derivarci $(1) \iff (2)$ abbiamo sfruttato principalmente il vincolo $\beta &amp;lt;\pi/K$:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Italian on Dario Bekic Blog</title><link>https://wuacs.github.io/tags/italian/</link><description>Recent content in Italian on Dario Bekic Blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 16 May 2026 10:16:02 +0200</lastBuildDate><atom:link href="https://wuacs.github.io/tags/italian/index.xml" rel="self" type="application/rss+xml"/><item><title>Usare le derivate</title><link>https://wuacs.github.io/posts/usare-le-derivate/</link><pubDate>Sat, 16 May 2026 10:16:02 +0200</pubDate><guid>https://wuacs.github.io/posts/usare-le-derivate/</guid><description>&lt;p&gt;A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell&amp;rsquo;algoritmo di Shor, quando mi sono imbattuto su questo (leggermente modificato ed incompleto) esercizio:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Siano $|\alpha|&amp;lt;\beta&amp;lt; \frac{\pi}{K}, \beta &amp;gt;0, K \in \mathbb{N}$ allora dimostra che &lt;/p&gt;
+$$\frac{\sin^2(K\alpha)}{\sin^2(\alpha)}&gt;\frac{\sin^2(K\beta)}{\sin^2(\beta)}$$&lt;/blockquote&gt;
+&lt;p&gt;Poiché stiamo elevando al quadrato il $\sin$ la disequazione sopra è soddisfatta quando:
+&lt;/p&gt;
+$$
+\begin{align}
+ \left| \frac{\sin(K\alpha)}{\sin(\alpha)}\right| &gt;&amp; \left|\frac{\sin(K\beta)}{\sin(\beta)}\right|\\ 
+ \frac{\sin (K |\alpha|)}{\sin(|\alpha|)}&gt;&amp;\frac{\sin(K \beta)}{\sin(\beta)}
+\end{align}
+$$&lt;p&gt;dove per derivarci $(1) \iff (2)$ abbiamo sfruttato principalmente il vincolo $\beta &amp;lt;\pi/K$:&lt;/p&gt;</description></item></channel></rss>
