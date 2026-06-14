@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-us" dir="ltr" class="kind-page">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell’algoritmo di Shor, quando mi sono imbattuto su questo (leggermente …">
+    <title>Usare le derivate</title>
+    <link rel="canonical" href="http://localhost:1313/posts/my-first-post/">
+
+
+
+<meta property="og:title" content="Usare le derivate">
+<meta property="og:description" content="A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell’algoritmo di Shor, quando mi sono imbattuto su questo (leggermente …">
+<meta property="og:image" content="http://localhost:1313/og/og-image-583bc6c089052d23ac6c3a855c17f6df.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1313/posts/my-first-post/">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Usare le derivate">
+<meta name="twitter:description" content="A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell’algoritmo di Shor, quando mi sono imbattuto su questo (leggermente …">
+<meta name="twitter:image" content="http://localhost:1313/og/og-image-583bc6c089052d23ac6c3a855c17f6df.svg">
+
+    <link rel="preload" href="/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/default.min.fb89c3008d933d5ac0e46af0bee4acd14efae3a00fca1ebbeb11e373ecaf3a64.css" integrity="sha256-&#43;4nDAI2TPVrA5GrwvuSs0U7646APyh676xHjc&#43;yvOmQ=">
+    <script src="/js/darkmode.min.9211af6d380489c7cf64d4b18a1e49e75be2bebf92031d2165eb6c20bc59c6a2.js" integrity="sha256-khGvbTgEicfPZNSxih5J51vivr&#43;SAx0hZetsILxZxqI=" defer></script>
+</head>
+
+
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']],                  
+      tags: 'ams' 
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+
+  <body>
+<header>
+    <div>
+        <h1>
+            <a href="http://localhost:1313/">Dario Bekic Blog</a>
+        </h1>
+        <div class="header-controls">
+            <div class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle" class="toggle-input" aria-label="Toggle dark mode">
+                <label for="darkModeToggle" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <main class="content-wrapper">
+        <article class="content-container">
+
+
+    <h1>Usare le derivate</h1>
+    <h4></h4>
+    <p class="author-date"><time datetime="2026-05-16T10:16:02+02:00">May 16, 2026</time></p>
+
+<p>A metà giugno 2026 stavo ripassando la dimostrazione sulla correttezza dell&rsquo;algoritmo di Shor, quando mi sono imbattuto su questo (leggermente modificato ed incompleto) esercizio:</p>
+<blockquote>
+<p>Siano $|\alpha|&lt;\beta&lt; \frac{\pi}{K}, \beta &gt;0, K \in \mathbb{N}$ allora dimostra che </p>
+$$\frac{\sin^2(K\alpha)}{\sin^2(\alpha)}>\frac{\sin^2(K\beta)}{\sin^2(\beta)}$$</blockquote>
+<p>Poiché stiamo elevando al quadrato il $\sin$ la disequazione sopra è soddisfatta quando:
+</p>
+$$
+\begin{align}
+ \left| \frac{\sin(K\alpha)}{\sin(\alpha)}\right| >& \left|\frac{\sin(K\beta)}{\sin(\beta)}\right|\\ 
+ \frac{\sin (K |\alpha|)}{\sin(|\alpha|)}>&\frac{\sin(K \beta)}{\sin(\beta)}
+\end{align}
+$$<p>dove per derivarci $(1) \iff (2)$ abbiamo sfruttato principalmente il vincolo $\beta &lt;\pi/K$:</p>
+<ul>
+<li>La parte a sinistra è conseguenza della definizione di modulo</li>
+<li>La parte a destra invece usa l&rsquo;ipotesi $\beta &lt; \pi/K$; abbiamo $\sin(K\beta)&lt;\sin(\pi)$ quindi $\sin(K\beta)$ ha lo stesso segno di $\sin(\beta)$: possiamo rimuovere il modulo</li>
+</ul>
+<p>Ora possiamo riformulare il problema in questo modo:</p>
+<blockquote>
+<p>Siano $0&lt;x &lt; y &lt; \frac{\pi}{K}\in \mathbb{R}, K \in \mathbb{N}$ dimostra che </p>
+$$\frac{\sin(K x)}{\sin(x)}>\frac{\sin(Ky)}{\sin(y)}$$</blockquote>
+<p>Una divisione tra seni: sembra particolarmente difficile.
+Qual è una funzione che &ldquo;trasforma&rdquo; le divisioni?
+Il logaritmo.
+Ricordiamo:</p>
+<blockquote>
+$$\ln(x/y)=\ln(x)-\ln(y)$$</blockquote>
+<p>Ma applicare il logaritmo ad ambo i lati presuppone avere la certezza che queste quantità siano positive. Per quello che stiamo per fare, ci basta considerare l&rsquo;intervallo $(0, \pi/K)$.</p>
+<blockquote id="lemma-1"><p>Lemma: </p>
+$$\forall x \in (0, \pi/K), f(x)=\frac{\sin(K x)}{\sin(x)} >0 $$</blockquote>
+<blockquote>
+<p>Dimostrazione:</p>
+<p>L&rsquo;argomento del denominatore si trova in $(0, \pi/K)$, siccome $K &gt; 0$, esso rappresenta sempre un angolo con l&rsquo;origine tra $(0, \pi)$, i.e., ha $\sin$ positivo.
+L&rsquo;argomento del $\sin$ al numeratore invece rappresenta un angolo tra $(0, \pi)$.</p>
+</blockquote>
+<p>Oltre a &ldquo;spezzare&rdquo; le divisioni il logaritmo ha un&rsquo;altra interessante proprietà: è monotona.
+Questo significa che se scopro che $\ln(f(x))$ è monotona crescente (in $(0, \pi/K)$, perché lì <em>solo</em> ho dimostrato essere definita) allora (2) è falsa: perché </p>
+$$x < y \xrightarrow[\text{monotonia crescente}\ \ln \circ f]{}\ln(f(x))<\ln(f(y)) \xrightarrow[\text{monotonia}\ \ln ]{} f(x) < f(y)$$<p>Stiamo quindi sfruttando la <em>monotonia</em> di $\ln$ per inferire cosa succeda da $f(x)$ a $f(y)$ perché sappiamo che $x &lt; y$ per ipotesi.</p>
+<p>Dimostriamo quindi che $\ln \circ f$ è monotona decrescente:</p>
+<blockquote>
+<p>Lemma: </p>
+$$\forall x,y \in (0, \pi/K), x < y \implies \ln (f(x))>\ln(f(y))$$</blockquote>
+<blockquote>
+<p>Dimostrazione:</p>
+<p>per capire l&rsquo;andamento della funzione (da qui il nome dell&rsquo;articolo) calcoliamo la derivata di $\ln \circ f(x)$:
+</p>
+$$\begin{align*}
+((\ln \circ f)(x))' &=\\
+\ln'(\sin(Kx))-\ln'(\sin(x))&=\\
+\frac{(\sin(Kx))'}{\sin(Kx)}-\frac{\sin'(x)}{\sin(x)}&=\\
+K\cot(Kx)-\cot(x)\end{align*}\
+$$<p>Ora riscriviamo l&rsquo;espressione come </p>
+$$1/x(Kx\cot(Kx)-x\cot(x))\tag{3}$$<p>
+Ora ci basta cercare la derivata della funzione $g(x)=x\cot x$ su $(0, \pi)$(e quindi varrà per $(0, \pi/K)$):
+</p>
+$$
+\cot(x)-\frac{x}{\sin^2(x)}
+$$<p>
+Moltiplichiamo ora per $\sin^2(x)$, la quantità nuova manterrà il segno della derivata:
+</p>
+$$
+\sin(x)\cos(x)-x<_{x>\sin(x)}0
+$$<p>
+Quest&rsquo;ultima disuguaglianza vale perché $\sin(x)\cos(x) \le \sin(x) &lt; x$ vale su $(0, \pi)$.</p>
+<p>Dunque, in (3) abbiamo </p>
+$$\underbrace{1/x}_{>0}\underbrace{(g(Kx)-g(x))}_{<0}<0$$</blockquote>
+<p>L&rsquo;unica cosa che manca è dimostrarsi che $x &lt; y &lt; \pi/K$ altrimenti non possiamo usare il <a href="#lemma-1">lemma</a>.</p>
+<p>Nel caso dell&rsquo;algoritmo di Shor, giusto per dare del contesto, avevamo da dimostrare che </p>
+$$y=\frac{r \pi}{2^{L+1}}\le \frac{\pi}{J_k}$$<p>
+dove</p>
+<ul>
+<li>r rappresenta il periodo di una funzione</li>
+<li>L rappresenta un upper-bound del periodo, cioè $r &lt; 2^{L/2}$</li>
+<li>$J_k\le \lfloor \frac{2^{L}-1}{r} \rfloor+1$ rappresenta il numero massimo di volte un certo elemento dell&rsquo;immagine appare applicando l&rsquo;oracolo su un registro di dimensione $2^L$.</li>
+</ul>
+<p>E veniva immediatamente:
+</p>
+$$
+\frac{r\pi}{2^{L+1}}=\frac{\pi}{\frac{2^{L+1}}{r}}<\frac{\pi}{\frac{2^L}{r}+1}<\frac{\pi}{J_k}
+$$
+
+        </article>
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Dario Bekic Blog</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
