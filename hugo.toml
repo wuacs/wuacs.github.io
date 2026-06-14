@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'Dario Bekic Blog'
+theme = 'dario'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+    [markup.goldmark.parser.attribute]
+        title = true
+        block = true
+[params]
+  math = true
+  showTags = true
+  display_tags = true
+  sidebar_tags = true
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
